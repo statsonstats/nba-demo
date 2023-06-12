@@ -1,0 +1,83 @@
+DATE,OPPONENT,RESULT,W-L,Hi Points,Hi Rebounds,Hi Assists
+"Thu, Oct 20",@ Los Angeles ,W103-97  ,1-0,George  15,Zubac  17,George  4
+"Sat, Oct 22",@ Sacramento ,W111-109  ,2-0,George  40,Zubac  8,George  6
+"Sun, Oct 23",vs Phoenix ,L112-95  ,2-1,Morris Sr.  22,Zubac  8,Wall  4
+"Tue, Oct 25",@ Oklahoma City ,L108-94  ,2-2,Kennard  15,Zubac  14,Jackson  6
+"Thu, Oct 27",@ Oklahoma City ,L118-110  ,2-3,Powell  21,Zubac  18,Wall  6
+"Sun, Oct 30",vs New Orleans ,L112-91  ,2-4,Powell  18,Morris Sr.  8,Wall  6
+"Mon, Oct 31",vs Houston ,W95-93  ,3-4,George  35,Zubac  12,George  8
+"Wed, Nov 2",@ Houston ,W109-101  ,4-4,George  28,Morris Sr.  10,George  5
+"Fri, Nov 4",@ San Antonio ,W113-106  ,5-4,George  32,Zubac  15,George  6
+"Sun, Nov 6",vs Utah ,L110-102  ,5-5,George  34,Zubac  9,Wall  6
+"Mon, Nov 7",vs Cleveland ,W119-117  ,6-5,George  26,Zubac  9,Jackson  7
+"Wed, Nov 9",vs Los Angeles ,W114-101  ,7-5,George  29,Morris Sr.  8,Wall  6
+"Sat, Nov 12",vs Brooklyn ,L110-95  ,7-6,George  17,Zubac  15,Wall  6
+"Mon, Nov 14",@ Houston ,W122-106  ,8-6,George  22,George  8,Jackson  6
+"Tue, Nov 15",@ Dallas ,L103-101  ,8-7,George  23,George  7,George  6
+"Thu, Nov 17",vs Detroit ,W96-91  ,9-7,Jackson  23,Zubac  18,Leonard  4
+"Sat, Nov 19",vs San Antonio ,W119-97  ,10-7,Powell  26,Zubac  11,Wall  15
+"Mon, Nov 21",vs Utah ,W121-114  ,11-7,Powell  30,Zubac  14,Wall  8
+"Wed, Nov 23",@ Golden State ,L124-107  ,11-8,Morris Sr.  19,Powell  7,Coffey  7
+"Fri, Nov 25",vs Denver ,L114-104  ,11-9,Wall  23,Zubac  9,Jackson  8
+"Sun, Nov 27",vs Indiana ,W114-100  ,12-9,Zubac  31,Zubac  29,Wall  8
+"Tue, Nov 29",@ Portland ,W118-112  ,13-9,Powell  32,Zubac  13,Jackson  12
+"Wed, Nov 30",@ Utah ,L125-112  ,13-10,Wall  26,Diabate  8,Wall  5
+"Sat, Dec 3",vs Sacramento ,L123-96  ,13-11,Boston Jr.  18,Zubac  15,Covington  4
+"Mon, Dec 5",@ Charlotte ,W119-117  ,14-11,George  19,Zubac  8,Wall  12
+"Wed, Dec 7",@ Orlando ,L116-111 OT ,14-12,Mann  19,Zubac  13,Batum  5
+"Thu, Dec 8",@ Miami ,L115-110  ,14-13,George  29,George  8,Wall  8
+"Sat, Dec 10",@ Washington ,W114-107  ,15-13,George  36,Leonard  8,George  6
+"Mon, Dec 12",vs Boston ,W113-93  ,16-13,George  26,Leonard  9,Leonard  6
+"Wed, Dec 14",vs Minnesota ,W99-88  ,17-13,Leonard  19,George  11,George  11
+"Thu, Dec 15",vs Phoenix ,L111-95  ,17-14,Mann  22,Brown  12,Wall  5
+"Sat, Dec 17",vs Washington ,W102-93  ,18-14,Leonard  31,Morris Sr.  12,Mann  6
+"Wed, Dec 21",vs Charlotte ,W126-105  ,19-14,George  22,George  8,George  8
+"Fri, Dec 23",@ Philadelphia ,L119-114  ,19-15,Leonard  28,Zubac  12,Leonard  5
+"Mon, Dec 26",@ Detroit ,W142-131 OT ,20-15,George  32,Zubac  15,George  11
+"Tue, Dec 27",@ Toronto ,W124-113  ,21-15,Zubac  23,Zubac  16,Leonard  8
+"Thu, Dec 29",@ Boston ,L116-110  ,21-16,Leonard  26,Zubac  11,George  6
+"Sat, Dec 31",@ Indiana ,L131-130  ,21-17,George  45,George  9,Leonard  7
+"Mon, Jan 2",vs Miami ,L110-100  ,21-18,George  25,Morris Sr.  7,George  7
+"Thu, Jan 5",@ Denver ,L122-91  ,21-19,Powell  13,Brown  10,Boston Jr.  4
+"Fri, Jan 6",@ Minnesota ,L128-115  ,21-20,Powell  21,Brown  11,Wall  8
+"Sun, Jan 8",vs Atlanta ,L112-108  ,21-21,Leonard  29,Zubac  18,Wall  5
+"Tue, Jan 10",vs Dallas ,W113-101  ,22-21,Leonard  33,Leonard  9,Leonard  4
+"Fri, Jan 13",vs Denver ,L115-103  ,22-22,Leonard  24,Leonard  8,Leonard  4
+"Sun, Jan 15",vs Houston ,W121-100  ,23-22,Mann  31,Mann  6,Jackson  5
+"Tue, Jan 17",vs Philadelphia ,L120-110  ,23-23,Leonard  27,Zubac  9,George  4
+"Wed, Jan 18",@ Utah ,L126-103  ,23-24,Powell  30,Zubac  12,Mann  5
+"Fri, Jan 20",@ San Antonio ,W131-126  ,24-24,Leonard  36,Zubac  16,George  12
+"Sun, Jan 22",@ Dallas ,W112-98  ,25-24,Leonard  30,Leonard  9,Covington  6
+"Tue, Jan 24",@ Los Angeles ,W133-115  ,26-24,George  27,George  9,Batum  6
+"Thu, Jan 26",vs San Antonio ,W138-100  ,27-24,George  35,Covington  7,George  7
+"Sat, Jan 28",@ Atlanta ,W120-113  ,28-24,Leonard  32,Leonard  8,George  6
+"Sun, Jan 29",@ Cleveland ,L122-99  ,28-25,Boston Jr.  24,Brown  16,Preston  8
+"Tue, Jan 31",@ Chicago ,W108-103  ,29-25,Leonard  33,Zubac  12,George  7
+"Thu, Feb 2",@ Milwaukee ,L106-105  ,29-26,Powell  26,Zubac  13,Leonard  5
+"Sat, Feb 4",@ New York ,W134-128 OT ,30-26,Leonard  35,Zubac  13,George  5
+"Mon, Feb 6",@ Brooklyn ,W124-116  ,31-26,George  29,Zubac  12,Leonard  6
+"Wed, Feb 8",vs Dallas ,L110-104  ,31-27,Powell  24,Zubac  10,Mann  4
+"Fri, Feb 10",vs Milwaukee ,L119-106  ,31-28,Boston Jr.  20,George  11,George  6
+"Tue, Feb 14",vs Golden State ,W134-124  ,32-28,Leonard  33,Leonard  7,George  8
+"Thu, Feb 16",@ Phoenix ,W116-107  ,33-28,George  26,Zubac  12,Gordon  7
+"Fri, Feb 24",vs Sacramento ,L176-175 2OT ,33-29,Leonard  44,George  10,Westbrook  14
+"Sun, Feb 26",@ Denver ,L134-124 OT ,33-30,Leonard  33,Plumlee  10,George  4
+"Tue, Feb 28",vs Minnesota ,L108-101  ,33-31,George  25,Zubac  9,Westbrook  10
+"Thu, Mar 2",@ Golden State ,L115-91  ,33-32,Leonard  21,Plumlee  20,Westbrook  6
+"Fri, Mar 3",@ Sacramento ,L128-127  ,33-33,George  28,Plumlee  8,Westbrook  10
+"Sun, Mar 5",vs Memphis ,W135-129  ,34-33,George  42,George  11,Westbrook  6
+"Wed, Mar 8",vs Toronto ,W108-100  ,35-33,Leonard  24,Leonard  12,Westbrook  7
+"Sat, Mar 11",vs New York ,W106-95  ,36-33,Leonard  38,George  8,George  8
+"Wed, Mar 15",vs Golden State ,W134-126  ,37-33,Leonard  30,Zubac  16,George  7
+"Sat, Mar 18",vs Orlando ,L113-108  ,37-34,George  30,Zubac  16,Westbrook  9
+"Sun, Mar 19",@ Portland ,W117-102  ,38-34,George  29,Westbrook  12,Westbrook  10
+"Tue, Mar 21",vs Oklahoma City ,L101-100  ,38-35,Leonard  21,Plumlee  12,Leonard  5
+"Thu, Mar 23",vs Oklahoma City ,W127-105  ,39-35,Leonard  32,Zubac  10,Westbrook  7
+"Sat, Mar 25",vs New Orleans ,L131-110  ,39-36,Hyland  18,Leonard  6,Hyland  7
+"Mon, Mar 27",vs Chicago ,W124-112  ,40-36,Batum  24,Leonard  7,Westbrook  10
+"Wed, Mar 29",@ Memphis ,W141-132  ,41-36,Westbrook  36,Zubac  7,Westbrook  10
+"Fri, Mar 31",@ Memphis ,L108-94  ,41-37,Powell  16,Zubac  15,Westbrook  11
+"Sat, Apr 1",@ New Orleans ,L122-114  ,41-38,Leonard  40,Leonard  8,Westbrook  10
+"Wed, Apr 5",vs Los Angeles ,W125-118  ,42-38,Powell  27,Zubac  13,Powell  4
+"Sat, Apr 8",vs Portland ,W136-125  ,43-38,Leonard  27,Zubac  10,Westbrook  6
+"Sun, Apr 9",@ Phoenix ,W119-114  ,44-38,Powell  29,Leonard  15,Westbrook  9
