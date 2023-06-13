@@ -1,1 +1,219 @@
-
+{
+    "id": "nba_stats",
+    "conf": {
+      "output": "default",
+      "streamtags": [],
+      "groups": {},
+      "asyncFuncTimeout": 1000,
+      "functions": [
+        {
+          "filter": "true",
+          "conf": {
+            "comment": "Parse csv into fields and values"
+          },
+          "id": "comment"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "mode": "extract",
+            "type": "csv",
+            "srcField": "_raw",
+            "fields": [
+              "date",
+              "opponent_parsed",
+              "result",
+              "win_loss",
+              "high_points",
+              "high_rebounds",
+              "high_assists"
+            ]
+          },
+          "id": "serde"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "comment": "Add the \"season\" field along with the NBA cal. year"
+          },
+          "id": "comment"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "add": [
+              {
+                "disabled": false,
+                "name": "season",
+                "value": "`2022-2023`"
+              }
+            ]
+          },
+          "id": "eval"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "comment": "Extract the name of the team and pull the value from the \"source\" field (i.e. bkn.csv). This is based on the directory where the data is stored."
+          },
+          "id": "comment"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "source": "source",
+            "iterations": 100,
+            "overwrite": false,
+            "regex": "/\\/data\\/nba_stats\\/(?<team_parsed>\\w{2,4})/",
+            "regexList": []
+          },
+          "id": "regex_extract",
+          "disabled": false
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "source": "high_assists",
+            "iterations": 100,
+            "overwrite": false,
+            "regex": "/(?<high_assists_stats>\\d+)/",
+            "regexList": []
+          },
+          "id": "regex_extract"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "source": "high_assists",
+            "iterations": 100,
+            "overwrite": false,
+            "regex": "/(?<high_assists_name>\\w+)/"
+          },
+          "id": "regex_extract"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "source": "high_points",
+            "iterations": 100,
+            "overwrite": false,
+            "regex": "/(?<high_points_stats>\\d+)/",
+            "regexList": []
+          },
+          "id": "regex_extract"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "source": "high_points",
+            "iterations": 100,
+            "overwrite": false,
+            "regex": "/(?<high_points_name>\\w+)/"
+          },
+          "id": "regex_extract"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "source": "high_rebounds",
+            "iterations": 100,
+            "overwrite": false,
+            "regex": "/(?<high_rebounds_stats>\\d+)/",
+            "regexList": []
+          },
+          "id": "regex_extract"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "source": "high_rebounds",
+            "iterations": 100,
+            "overwrite": false,
+            "regex": "/(?<high_rebounds_name>\\w+)/"
+          },
+          "id": "regex_extract"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "source": "opponent_parsed",
+            "iterations": 100,
+            "overwrite": false,
+            "regex": "/(?<opponent>[^vs|^@]\\w.*)/"
+          },
+          "id": "regex_extract"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "source": "date",
+            "iterations": 100,
+            "overwrite": false,
+            "regex": "/(?<day_of_week>\\w{3}),\\s(?<month_and_day>\\w{3}\\s\\d{1,2})/"
+          },
+          "id": "regex_extract"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "maxNumOfIterations": 5000,
+            "code": "var a=\"bos\";\nvar b=\"bkn\";\nvar c=\"atl\";\nvar d=\"cha\";\nvar e=\"chi\";\nvar f=\"cle\";\nvar g=\"dal\";\nvar h=\"den\";\nvar i=\"det\";\nvar j=\"gs\";\nvar k=\"hou\";\nvar l=\"ind\";\nvar m=\"lac\";\nvar n=\"lal\";\nvar o=\"mem\";\nvar p=\"mia\";\nvar q=\"mil\";\nvar r=\"min\";\nvar s=\"no\";\nvar t=\"ny\";\nvar u=\"okc\";\nvar v=\"orl\";\nvar w=\"phi\";\nvar x=\"phx\";\nvar y=\"por\";\nvar z=\"sac\";\nvar aa=\"sa\";\nvar ab=\"tor\";\nvar cc=\"utah\";\nvar dd=\"wsh\";\n\nif (__e['team_parsed'] == a) {\n  __e['team'] = \"Boston Celtics\";\n}\nelse if (__e['team_parsed'] == b) {\n  __e['team'] = \"Brooklyn Nets\";\n} \nelse if (__e['team_parsed'] == c) {\n  __e['team'] = \"Atlanta Hawks\";\n}\nelse if (__e['team_parsed'] == d) {\n  __e['team'] = \"Charlotte Hornets\";\n}\nelse if (__e['team_parsed'] == e) {\n    __e['team'] = \"Chicago Bulls\";\n  }\nelse if (__e['team_parsed'] == f) {\n    __e['team'] = \"Clevland Cavaliers\";\n  }\nelse if (__e['team_parsed'] == g) {\n    __e['team'] = \"Dallas Mavericks\";\n  }\nelse if (__e['team_parsed'] == h) {\n    __e['team'] = \"Denver Nuggets\";\n  }\nelse if (__e['team_parsed'] == i) {\n    __e['team'] = \"Detroit Pistons\";\n  }\nelse if (__e['team_parsed'] == j) {\n    __e['team'] = \"Golden State Warriors\";\n  }\nelse if (__e['team_parsed'] == k) {\n    __e['team'] = \"Houston Rockets\";\n  }\nelse if (__e['team_parsed'] == l) {\n    __e['team'] = \"Indiana Pacers\";\n  }\nelse if (__e['team_parsed'] == m) {\n    __e['team'] = \"Los Angeles Clippers\";\n  }\nelse if (__e['team_parsed'] == n) {\n    __e['team'] = \"Los Angeles Lakers\";\n  }\nelse if (__e['team_parsed'] == o) {\n    __e['team'] = \"Memphis Grizzlies\";\n  }\nelse if (__e['team_parsed'] == p) {\n    __e['team'] = \"Miami Heat\";\n  }\nelse if (__e['team_parsed'] == q) {\n    __e['team'] = \"Milwauke Bucks\";\n  }\nelse if (__e['team_parsed'] == r) {\n    __e['team'] = \"Minnesota Timberwolves\";\n  }\nelse if (__e['team_parsed'] == s) {\n    __e['team'] = \"New Orleans Pelicans\";\n  }\nelse if (__e['team_parsed'] == t) {\n    __e['team'] = \"New York Knicks\";\n  }\nelse if (__e['team_parsed'] == u) {\n    __e['team'] = \"Oklahoma City Thunder\";\n  }\nelse if (__e['team_parsed'] == v) {\n    __e['team'] = \"Orlando Magic\";\n  }\nelse if (__e['team_parsed'] == w) {\n    __e['team'] = \"Phil 76ers\";\n  }\nelse if (__e['team_parsed'] == x) {\n    __e['team'] = \"Phoenix Suns\";\n  }\nelse if (__e['team_parsed'] == y) {\n    __e['team'] = \"Portland Trailblazers\";\n  }\nelse if (__e['team_parsed'] == z) {\n    __e['team'] = \"Sacramento Kings\";\n  }\nelse if (__e['team_parsed'] == aa) {\n    __e['team'] = \"San Antonio Spurs\";\n  }\nelse if (__e['team_parsed'] == ab) {\n    __e['team'] = \"Toronto Raptors\";\n  }\nelse if (__e['team_parsed'] == cc) {\n    __e['team'] = \"Utah Jazz\";\n  }\nelse if (__e['team_parsed'] == dd) {\n    __e['team'] = \"Washington Wizards\";\n  }\n\n////////////////////\n\n\nif (__e['day_of_week'] == \"Mon\") {\n    __e['day_of_week'] = \"Monday\";\n  }\n  else if (__e['day_of_week'] == \"Tue\") {\n    __e['day_of_week'] = \"Tuesday\";\n  }\n  else if (__e['day_of_week'] == \"Wed\") {\n    __e['day_of_week'] = \"Wednesday\";\n  }\n  else if (__e['day_of_week'] == \"Thu\") {\n    __e['day_of_week'] = \"Thursday\";\n  }\n  else if (__e['day_of_week'] == \"Fri\") {\n    __e['day_of_week'] = \"Friday\";\n  }\n  else if (__e['day_of_week'] == \"Sat\") {\n    __e['day_of_week'] = \"Saturday\";\n  }\n  else if (__e['day_of_week'] == \"Sun\") {\n    __e['day_of_week'] = \"Sunday\";\n  }\n\n////////////////////\nif (__e['_raw'].includes('@')) {\n    __e['location'] = \"Away\";\n  }\n  else {\n  __e['location'] = \"Home\"\n  }\n////////////////////"
+          },
+          "id": "code",
+          "disabled": false
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "remove": [
+              "opponent_parsed",
+              "high_rebounds",
+              "high_assists",
+              "high_points",
+              "date",
+              "team_parsed"
+            ]
+          },
+          "id": "eval"
+        },
+        {
+          "filter": "true",
+          "conf": {
+            "comment": "Add \"year\" field (2022 or 2023) based on the month. In this case, the season starts in 2022 and ends in 2023."
+          },
+          "id": "comment"
+        },
+        {
+          "filter": "month_and_day.startsWith('Oct') || month_and_day.startsWith('Nov')|| month_and_day.startsWith('Dec')",
+          "conf": {
+            "add": [
+              {
+                "disabled": false,
+                "name": "year",
+                "value": "`2022`"
+              }
+            ]
+          },
+          "id": "eval"
+        },
+        {
+          "filter": "month_and_day.startsWith('Jan') || month_and_day.startsWith('Feb')|| month_and_day.startsWith('Mar')|| month_and_day.startsWith('Apr')|| month_and_day.startsWith('May')",
+          "conf": {
+            "add": [
+              {
+                "disabled": false,
+                "name": "year",
+                "value": "`2023`"
+              }
+            ]
+          },
+          "id": "eval"
+        },
+        {
+          "conf": {},
+          "filter": "_raw == 'DATE,OPPONENT,RESULT,W-L,Hi Points,Hi Rebounds,Hi Assists'",
+          "id": "drop"
+        }
+      ]
+    }
+  }
